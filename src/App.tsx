@@ -1,7 +1,7 @@
-import { Button } from "./components/Button";
-import { ThemeProvider } from "styled-components";
-import { defaultTheme } from "./styles/theme/default";
-import { GlobalStyle } from "./styles/global";
+import { Button } from './components/Button'
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './styles/theme/default'
+import { GlobalStyle } from './styles/global'
 function App() {
   return (
     <ThemeProvider theme={defaultTheme}>
@@ -14,7 +14,7 @@ function App() {
 
       <GlobalStyle />
     </ThemeProvider>
-  );
+  )
 }
 
-export default App;
+export default App
