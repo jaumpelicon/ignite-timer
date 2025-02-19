@@ -1,8 +1,55 @@
+import { HistoryContainer, HistoryList, Status } from './history_styles'
+
 export function History() {
   return (
-    <>
-      <h1>History</h1>
-      <p>Welcome to the History page!</p>
-    </>
+    <HistoryContainer>
+      <h1>Meu histórico</h1>
+      <HistoryList>
+        <table>
+          <thead>
+            <tr>
+              <th>Tarefa</th>
+              <th>Duração</th>
+              <th>Início</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>tarefa</td>
+              <td>20 min</td>
+              <td>Ha 2 meses</td>
+              <td>
+                <Status statusColor="green">concluido</Status>
+              </td>
+            </tr>
+            <tr>
+              <td>tarefa</td>
+              <td>20 min</td>
+              <td>Ha 2 meses</td>
+              <td>
+                <Status statusColor="red">error</Status>
+              </td>
+            </tr>
+            <tr>
+              <td>tarefa</td>
+              <td>20 min</td>
+              <td>Ha 2 meses</td>
+              <td>
+                <Status statusColor="yellow">processando</Status>
+              </td>
+            </tr>
+            <tr>
+              <td>tarefa</td>
+              <td>20 min</td>
+              <td>Ha 2 meses</td>
+              <td>
+                <Status statusColor="green">concluido</Status>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </HistoryList>
+    </HistoryContainer>
   )
 }
