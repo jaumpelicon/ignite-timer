@@ -96,7 +96,12 @@ export const StartButton = styled.button`
   font-weight: bold;
   cursor: pointer;
 
-  &:hover {
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
     background: ${(props) => props.theme['green-700']};
   }
 `
