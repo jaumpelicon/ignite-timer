@@ -1,8 +1,9 @@
 import { useContext } from 'react'
-import { Cycle, CyclesContext } from '../../contexts/CyclesContext'
+import { CyclesContext } from '../../contexts/CyclesContext'
 import { HistoryContainer, HistoryList, Status } from './history_styles'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale'
+import { Cycle } from '../../reducers/cycles/reducer'
 function getStatusColor(cycle: Cycle): 'red' | 'yellow' | 'green' {
   if (cycle.interruptedDate) return 'red'
   if (!cycle.finishDate) return 'yellow'
@@ -52,38 +53,6 @@ export function History() {
                 </tr>
               )
             })}
-            {/* <tr>
-              <td>tarefa</td>
-              <td>20 min</td>
-              <td>Ha 2 meses</td>
-              <td>
-                <Status statusColor="green">concluido</Status>
-              </td>
-            </tr>
-            <tr>
-              <td>tarefa</td>
-              <td>20 min</td>
-              <td>Ha 2 meses</td>
-              <td>
-                <Status statusColor="red">error</Status>
-              </td>
-            </tr>
-            <tr>
-              <td>tarefa</td>
-              <td>20 min</td>
-              <td>Ha 2 meses</td>
-              <td>
-                <Status statusColor="yellow">processando</Status>
-              </td>
-            </tr>
-            <tr>
-              <td>tarefa</td>
-              <td>20 min</td>
-              <td>Ha 2 meses</td>
-              <td>
-                <Status statusColor="green">concluido</Status>
-              </td>
-            </tr> */}
           </tbody>
         </table>
       </HistoryList>
